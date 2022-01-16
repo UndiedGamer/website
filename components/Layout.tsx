@@ -1,17 +1,13 @@
 import { FC } from "react";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Appbar from "./Appbar";
 
 export const Layout: FC = ({ children }) => {
 	return (
-		<>
-			<div className="content">
-				<Navbar />
-				{children}
-				<Footer />
-			</div>
-		</>
-	)
+    <div className="dark:bg-[#10142c] dark:text-white">
+      <Appbar />
+      <div className="content">{children}</div>
+    </div>
+  );
 }
 
 export default Layout;
